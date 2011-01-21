@@ -1,5 +1,6 @@
 <?php
 
+
 use Nette\String, Nette\Web\HttpRequest;
 
 require_once dirname(__FILE__) . "/../../libs/nette.php";
