@@ -28,8 +28,10 @@ class AdminTexy extends Texy
 		$this->allowed['deprecated/codeswitch'] = true; // `=code
 
 		// images
-		$this->imageModule->fileRoot = __DIR__ . "/images";
-		$this->imageModule->root = "images/";
+		//$this->imageModule->fileRoot = __DIR__ . "/images";
+		//$this->imageModule->root = "images/";
+		$this->imageModule->fileRoot = __DIR__ . "/";
+		$this->imageModule->root = "./";
 		
 		// přidávání youtube.com, stream.cz videa a flash
 		$this->addHandler('image', array(__CLASS__, 'youtubeHandler'));

@@ -6,7 +6,7 @@ require_once dirname(__FILE__) . '/../../libs/nette.php';
 require_once dirname(__FILE__) . '/paths.php';
 
 try {
-	$src = get_magic_quotes_gpc() ? stripslashes($_POST["image"]) : $_POST["image"];
+	$src = get_magic_quotes_gpc() ? stripslashes($_GET["image"]) : $_GET["image"];
    	$image = Image::fromFile(FILES_BASE_PATH . "/" . $src);
 	$image->resize(60, 40);
 	$image->send();
